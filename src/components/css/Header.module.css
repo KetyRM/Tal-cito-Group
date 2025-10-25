@@ -1,0 +1,28 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #A98CC6;
+    align-items: center;
+    padding: 22px 50px;
+}
+
+.nav{
+    display: flex;
+    gap: 36px;
+    align-items: center;
+}
+.link, .link_bg{
+    color: black;
+    font-size: 20px;
+}
+.link_bg{
+    background-color: #11AE4B;
+    border-radius: 100px;
+    padding: 6px 30px;
+}
+.link_bg:hover{
+    color: #FFFDEF;
+}
+.link:hover{
+    color: #FFFDEF;
+}
