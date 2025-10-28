@@ -1,0 +1,443 @@
+.section{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 100px 76px;
+    background-color: #FFFDEF;
+    background-image: url(../../images/decoracao.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.texto{
+    width: 700px;
+    margin-top: -13rem;
+}
+
+h1{
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 43px;
+    
+}
+
+h2{
+    font-size: 36px;
+}
+.carrosel {
+  width: 40%;
+}
+.slideItem {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+/*Responsividade da primeira sessão*/
+@media (max-width: 1024px) {
+  .section {
+    flex-direction: column;
+    padding: 60px 40px;
+    text-align: center;
+  }
+
+  .texto {
+    width: 90%;
+    margin-top: -5rem;
+  }
+
+  .carrosel {
+    width: 80%;
+    margin-top: 40px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .slideItem {
+    height: 300px;
+  }
+}
+
+/* Celulares (máx. 768px) */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .texto {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .carrosel {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .slideItem {
+    height: 250px;
+  }
+}
+
+/* Celulares pequenos (máx. 480px) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .slideItem {
+    height: 200px;
+  }
+}
+
+
+
+
+/*Sessão Personalizar*/
+.personalizar{
+    background-color: #8E6BA3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.itens{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.frase{
+    font-size: 34px;
+    color: #FFFDEF;
+}
+.passos{
+    width: 600px;
+}
+.encaixe{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 60px;
+    gap: 20px;
+}
+.perso{
+    background-color: #FFFDEF;
+    width: 604px;
+    height: 187px;
+    border-radius: 0px 0px 300px 300px;
+    text-align: center;
+}
+.per{
+    font-size: 48px;
+    font-weight: bold;
+    color:  #8E6BA3;
+}
+
+.produt {
+  animation: float 3s ease-in-out infinite; 
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0); /* posição inicial e final */
+  }
+  50% {
+    transform: translateY(-15px); /* sobe 15px no meio da animação */
+  }
+}
+/* Responsividade */
+@media (max-width: 1024px) {
+  .itens {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .passos {
+    width: 90%;
+  }
+
+  .frase {
+    font-size: 26px;
+  }
+
+  /* No tablet, ainda lado a lado */
+  .encaixe {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .imgprod img {
+    width: 50%;
+  }
+
+  .passos img,
+  .imgprod img {
+    width: 200px;
+  }
+
+  .perso {
+    width: 80%;
+    height: 160px;
+  }
+
+  .per {
+    font-size: 36px;
+  }
+}
+
+/* Celulares (empilha) */
+@media (max-width: 768px) {
+  .itens {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .passos {
+    width: 100%;
+  }
+
+  .frase {
+    font-size: 22px;
+  }
+
+  /* Aqui muda pra coluna, pra caber melhor */
+  .encaixe {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .passos img,
+  .imgprod img {
+    width: 150px;
+  }
+
+  .perso {
+    width: 90%;
+    height: 140px;
+  }
+
+  .per {
+    font-size: 30px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .frase {
+    font-size: 18px;
+  }
+
+  .passos img,
+  .imgprod img {
+    width: 130px;
+  }
+
+  /* mantém empilhado pra não quebrar o layout */
+  .encaixe {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .per {
+    font-size: 24px;
+  }
+
+  .perso {
+    width: 95%;
+    height: 120px;
+  }
+
+  .imgprod img {
+    width: 300px;
+  }
+}
+.imgprod img {
+  width: 700px; /* tamanho máximo no desktop */
+  max-width: 90%; /* nunca passa de 90% da largura do container */
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+/* Sessão 3 */
+.contato {
+    background-color: #FFFDEF;
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;  /* alinha conteúdo no topo */
+    min-height: 700px;            /* altura mínima */
+    background-image: url(../../images/mulher.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: right 85px; 
+}
+
+/* Caixa do título */
+.cont {
+    background-color: #8E6BA3;
+    width: 604px;
+    height: 187px;
+    border-radius: 0px 0px 300px 300px;
+    text-align: center;
+}
+
+.con {
+    color: #FFFDEF;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+/* Caixa de contatos */
+.caixa {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+}
+
+/* Logo + texto */
+.logo_text {
+    display: flex;
+    align-items: center;
+    margin-left: 10em;
+    margin-top: 10rem;
+    width: 500px;
+    gap: 30px;
+    color: #E96B12;
+}
+
+/* Número de contato */
+.nume {
+    color: #FFFDEF;
+    background-color: #E96B12;
+    border-radius: 30px;
+    width: 350px;
+    margin-left: 17rem;
+    margin-top: 3rem;
+    font-size: 36px;
+    text-align: center;
+    padding: 10px 40px;
+    box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.2);
+}
+
+.comuni {
+    font-size: 36px;
+}
+
+/* Mulher atendendo */
+.mulher_atende {
+    display: flex;
+    align-items: flex-end;
+}
+
+
+/* Responsividade */
+@media (min-width: 1200px) {
+    .cont {
+        width: 604px;
+        height: 187px;
+    }
+    .con {
+        font-size: 56px;
+    }
+    .logo_text {
+        margin-left: 12em;
+        margin-top: 12rem;
+        width: 600px;
+        gap: 40px;
+    }
+    .nume {
+        margin-left: 20rem;
+        margin-top: 3.5rem;
+        font-size: 42px;
+        width: 400px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .contato{
+        background-image: none;
+    }
+    .cont {
+        width: 400px;
+        height: 160px;
+    }
+    .con {
+        font-size: 40px;
+    }
+    .logo_text {
+        margin-left: 5em;
+        margin-top: 8rem;
+        width: 400px;
+        gap: 20px;
+    }
+    .nume {
+        margin-left: 10rem;
+        font-size: 32px;
+        width: 300px;
+    }
+}
+
+/* Smartphones / telas pequenas */
+@media (max-width: 767px) {
+    .contato {
+        background-image: none; /* remove imagem de fundo */
+        min-height: 500px;
+    }
+    .cont {
+        width: 90%;
+        height: 140px;
+    }
+    .con {
+        font-size: 37px;
+        align-items: center;
+    }
+    .caixa {
+        flex-direction: column;  /* empilha elementos */
+        align-items: center;
+        align-items: center;
+    }
+    .logo_text {
+        margin-left: 0;
+        margin-left: 2rem;
+        margin-top: 2rem;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+    .nume {
+        margin-left: 4rem;
+        margin-top: 2rem;
+        width: 80%;
+        font-size: 24px;
+    }
+    .comuni {
+        font-size: 24px;
+    }
+}

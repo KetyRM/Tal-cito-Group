@@ -1,28 +1,119 @@
-.header{
-    display: flex;
-    justify-content: space-between;
-    background-color: #A98CC6;
-    align-items: center;
-    padding: 22px 50px;
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #A98CC6;
+  align-items: center;
+  padding: 22px 50px;
+  position: relative;
 }
 
-.nav{
+.logo {
+  height: 60px;
+}
+
+/* Mantém seu estilo */
+.nav {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+
+.link,
+.link_bg {
+  color: black;
+  font-size: 22px;
+}
+
+.link_bg {
+  background-color: #11AE4B;
+  border-radius: 100px;
+  padding: 8px 30px;
+  font-size: 22px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.link_bg:hover {
+  color: #FFFDEF;
+}
+
+.link:hover {
+  color: #FFFDEF;
+}
+
+.link_bg img {
+  margin-right: 8px;
+  vertical-align: middle;
+  width: 22px;
+}
+
+/* ======================== */
+/* RESPONSIVIDADE           */
+/* ======================== */
+
+/* Ícone de hambúrguer (escondido no desktop) */
+.hamburguer {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Tablets e celulares */
+@media (max-width: 768px) {
+  .header {
+    justify-content: center;
+    padding: 18px 30px;
+  }
+
+  /* Mostra o hambúrguer no canto esquerdo */
+  .hamburguer {
+    display: block;
+    position: absolute;
+    left: 20px;
+  }
+
+  /* Centraliza a logo */
+  .logo {
+    margin: 0 auto;
+    height: 55px;
+  }
+
+  /* Esconde o menu padrão */
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background-color: #A98CC6;
+    padding: 20px 0;
+    gap: 25px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.3s ease;
+  }
+
+  /* Quando aberto */
+  .nav.ativo {
     display: flex;
-    gap: 36px;
-    align-items: center;
-}
-.link, .link_bg{
-    color: black;
+  }
+
+  /* Itens maiores no mobile */
+  .link,
+  .link_bg {
     font-size: 20px;
+  }
 }
-.link_bg{
-    background-color: #11AE4B;
-    border-radius: 100px;
-    padding: 6px 30px;
-}
-.link_bg:hover{
-    color: #FFFDEF;
-}
-.link:hover{
-    color: #FFFDEF;
+
+/* Animação suave ao abrir o menu */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
