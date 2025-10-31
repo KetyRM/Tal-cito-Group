@@ -11,7 +11,6 @@ import moca from '../images/mulher.png'
 import seguro from '../images/segurança.png'
 import qualidade from '../images/qualidade.png'
 import parceria from '../images/parceria.png'
-import Footer from './Footer.jsx'
 
 
 import { Swiper, SwiperSlide } from 'swiper/react'

@@ -5,6 +5,8 @@ import iconePreto from '../images/whats_preto.png';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react'; 
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+
 
 export default function Header() {
   const [icone, setIcone] = useState(iconePreto);
@@ -35,7 +37,7 @@ export default function Header() {
         </NavLink>
 
         <NavLink 
-          to="/catalogo" 
+          to="/Product" 
           className={styles.link} 
           onClick={fecharMenu}
         >
