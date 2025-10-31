@@ -8,7 +8,10 @@ import num2 from '../images/num2.png'
 import num3 from '../images/num3.png'
 import laranja from '../images/whats_laranja.png'
 import moca from '../images/mulher.png'
-
+import seguro from '../images/segurança.png'
+import qualidade from '../images/qualidade.png'
+import parceria from '../images/parceria.png'
+import Footer from './Footer.jsx'
 
 
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -116,7 +119,19 @@ export default function Main() {
                             <h3 className={styles.comuni}>Nosso principal meio de comunicação é o WhastApp:</h3>
                         </div>
 
-                        <h3 className={styles.nume}>(11) 95078-2152</h3>
+                        <div style={{ height: '2rem' }}></div>
+
+               
+                        <a
+                            href="https://wa.me/5511950782152"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.nume}
+                        >
+                            (11) 95078-2152
+                        </a>
+
+                        
                         
                     </div>
                 </div>
@@ -124,9 +139,30 @@ export default function Main() {
 
 
 
-            <section className={styles.escolher}>aaa</section>
+            <section className={styles.escolher}>
 
+                <div className={styles.talac}>
+                    <h1 className={styles.esco}>POR QUE ESCOLHER A TALÁCITO?</h1>
+                </div>
 
+                <div className={styles.diferenciais}>
+
+                    <div className={styles.ordem}>
+                        <img className={styles.imges1} src={seguro} alt="Simbolo de segurança" />
+                        <h4>Segurança de uma entrega de qualidade</h4>
+                    </div>
+
+                    <div className={styles.ordem}>
+                         <img className={styles.imges1}  src={qualidade} alt="Simbolo de qualidade" />
+                        <h4>Excelência na qualidade dos produtos</h4>
+                    </div>
+
+                    <div className={styles.ordem}>
+                         <img className={styles.imges1} src={parceria} alt="Simbolo de parceria" />
+                        <h4>Empresa que trasforma sonhos em realidade</h4>
+                    </div>
+                </div>
+            </section>
         </main>
     )
 }

@@ -46,10 +46,6 @@ header {
   width: 22px;
 }
 
-/* ======================== */
-/* RESPONSIVIDADE           */
-/* ======================== */
-
 /* Ícone de hambúrguer (escondido no desktop) */
 .hamburguer {
   display: none;
