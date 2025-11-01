@@ -4,6 +4,10 @@ import Copo from '../images/copo_inclinado.png'
 import Whats from '../images/w1.png'
 import Toalhas from '../images/toalha.png'
 import Cracha from '../images/cracha.png'
+import Caneta from '../images/caneta_certa.png'
+import Camiseta from '../images/camisa.png'
+import Canecas from  '../images/canequinhas.png'
+import Chaveiros from '../images/chaveirinho.png'
 
 function Product() {
   return (
@@ -41,7 +45,32 @@ function Product() {
 
 
 
-      <section className={Styles.camiseta}>aaaaaaa</section>
+          <section className={Styles.camiseta}>
+              <div className={Styles.camisetaContainer}>
+
+                  <div className={Styles.textoCamiseta}>
+                      <h2>Personalizamos Camisetas</h2>
+                      <h3>Dos mais diversos tipos e tamanhos, fechamos orçamento para unidade e grandes pedidos.</h3>
+
+                      <div className={Styles.camisetaBtn}>
+                          <a
+                              href="https://wa.me/5511950782152"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={Styles.whatsCamiseta}
+                          >
+                              Faça seu orçamento
+                          </a>
+                      </div>
+                  </div>
+                   <img src={Camiseta} alt="Personalizar camisetas" />
+
+              </div>
+          </section>
+
+
+
+
 
 
 
@@ -71,9 +100,32 @@ function Product() {
     </section>
 
 
+          <section className={Styles.canecasection}>
+              <div className={Styles.canecacont}>
+
+                  <div className={Styles.textocaneca}>
+                      <h2>Personalizamos Canecas</h2>
+                      <h3>Gravação de nomes, logos ou mensagens em canecas de diversos modelos e cores.</h3>
+
+                      <div className={Styles.caneca}>
+                          <a
+                              href="https://wa.me/5511950782152"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={Styles.whatscan}
+                          >
+                              Faça seu orçamento
+                          </a>
+                      </div>
+                  </div>
+                    <img src={Canecas} alt="Personalizar canecas" />
+              </div>
+          </section>
+
+
+
 
           
-      <section className={Styles.caneca}>aa</section>
 
 
           <section className={Styles.crachaSection}>
@@ -100,6 +152,28 @@ function Product() {
 
 
 
+          <section className={Styles.chaveirosection}>
+              <div className={Styles.chaveirocont}>
+
+                  <div className={Styles.textochaveiro}>
+                      <h2>Personalizamos Chaveiros</h2>
+                      <h3>Gravação de nomes, logos ou mensagens em chaveiros de diversos modelos e materiais.</h3>
+
+                      <div className={Styles.chaveirobtn}>
+                          <a
+                              href="https://wa.me/5511950782152"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={Styles.whatschaveiro}
+                          >
+                              Faça seu orçamento
+                          </a>
+                      </div>
+                  </div>
+
+                  <img src={Chaveiros} alt="Personalizar chaveiros" />
+              </div>
+          </section>
 
 
 
@@ -110,11 +184,44 @@ function Product() {
 
 
 
-      <section className={Styles.chaveiro}>aa</section>
 
 
-      
-      <section className={Styles.caneta}>aa</section>
+
+
+
+
+
+
+
+
+
+
+
+      <section className={Styles.caneta}>
+  <div className={Styles.canetacontainer}>
+    <img src={Caneta} alt="Personalizar canetas" />
+
+    <div className={Styles.texto3}>
+      <h2>Personalizamos Canetas</h2>
+      <h3>Gravação de nomes, logos ou mensagens em canetas de diversos modelos e cores.</h3>
+
+      <div className={Styles.canet1}>
+        <a
+          href="https://wa.me/5511950782152"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={Styles.whatsca}
+        >
+          Faça seu orçamento
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
     </>
   );
 }

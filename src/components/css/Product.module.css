@@ -82,7 +82,16 @@ h3{
     font-weight: 500;
     color: #FFFDEF;
     font-size: 24px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
+.whatsLink:hover {
+    background-color: #0e8c3c;
+    transform: scale(1.05);
+}
+
+
+
 @keyframes float {
     0% {
         transform: translateY(0px);
@@ -204,8 +213,170 @@ h3{
 }
 
 
+/*Sessão 2 - Camiseta*/
+.camiseta {
+    background-color: #E96B12;
+    color: #FFFDEF;
+    display: flex;
+    background-image: url(../../images/camisas.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    align-items: center;
+    gap: 2rem;
+    height: 500px;
+    justify-content: flex-start; /* imagem à esquerda */
+}
 
+.camisetaContainer {
+    display: flex;
+    width: 1300px;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start; /* imagem à esquerda */
+}
 
+.textoCamiseta {
+    background-color: #FFFDEF;
+    width: 604px;
+    height: 291px;
+    border-radius: 0px 300px 300px 0px; /* borda arredondada à direita */
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+
+.whatsCamiseta {
+    background-color: #11AE4B;
+    padding: 10px 50px 10px 40px;
+    border-radius: 300px;
+    background-image: url(../../images/w1.png);
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    text-decoration: none;
+    font-weight: 500;
+    color: #FFFDEF;
+    font-size: 24px;
+    display: inline-block;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsCamiseta:hover {
+    background-color: #0e8c3c;
+    transform: scale(1.05);
+}
+
+.camisetaContainer img {
+    z-index: 1;
+    margin-top: -1rem;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+    width: 500px;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+/* Mobile */
+@media (max-width: 768px) {
+    .camiseta {
+        flex-direction: column; /* empilha verticalmente */
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        gap: 1.5rem;
+        background-position: center bottom;
+        padding: 2rem 0;
+    }
+
+    .camisetaContainer {
+        flex-direction: column; /* imagem em cima, texto embaixo */
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        gap: 1.5rem;
+    }
+
+    .camisetaContainer img {
+        width: 80%;
+        max-width: 300px;
+        margin: 0 auto;
+        order: 1; /* garante que imagem fique em cima */
+        z-index: 2;
+    }
+
+    .textoCamiseta {
+        width: 90%;
+        height: auto;
+        border-radius: 20px;
+        padding: 1.5rem;
+        gap: 0.8rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        order: 2; /* garante que texto fique embaixo */
+        z-index: 1;
+    }
+
+    .textoCamiseta h2 { font-size: 28px; }
+    .textoCamiseta h3 { font-size: 16px; }
+
+    .whatsCamiseta {
+        font-size: 18px;
+        padding: 8px 30px;
+        background-size: 20px;
+        background-position: 10px center;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .camiseta {
+        flex-direction: row; /* layout horizontal */
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        background-position: right bottom;
+        padding: 2rem 0;
+    }
+
+    .camisetaContainer {
+        flex-direction: row;
+        width: 90%;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .camisetaContainer img {
+        width: 250px;
+        margin: 0;
+        order: 1; /* imagem à esquerda */
+        z-index: 1;
+    }
+
+    .textoCamiseta {
+        width: 60%;
+        height: auto;
+        padding: 1rem;
+        border-radius: 0px 200px 200px 0;
+        order: 2; /* texto à direita */
+    }
+
+    .textoCamiseta h2 { font-size: 30px; }
+    .textoCamiseta h3 { font-size: 18px; }
+
+    .whatsCamiseta { font-size: 20px; padding: 10px 40px; }
+}
 
 
 
@@ -259,6 +430,12 @@ h3{
     font-weight: 500;
     color: #FFFDEF;
     font-size: 24px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whats:hover {
+    background-color: #0e8c3c;
+    transform: scale(1.05);
 }
 .toalha4 img{
     margin-right: 50rem;
@@ -268,7 +445,6 @@ h3{
     animation: float 3s ease-in-out infinite; 
 
 }
-/* === RESPONSIVIDADE - SESSÃO TOALHAS === */
 
 /* Telas pequenas - Mobile */
 @media (max-width: 768px) {
@@ -440,6 +616,12 @@ h3{
     font-weight: 500;
     color: #FFFDEF;
     font-size: 24px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatscra:hover {
+    background-color: #0e8c3c;
+    transform: scale(1.05);
 }
 
 .crachaContainer img {
@@ -592,3 +774,571 @@ h3{
 }
 
 
+
+
+
+
+
+
+
+
+
+/*Sessão Caneta - 7*/
+.caneta {
+    background-color: #E48527;
+    color: #FFFDEF;
+    display: flex;
+    background-image: url(../../images/fundo_caneta.png);
+    background-repeat: no-repeat;
+    align-items: center;
+    gap: 2rem;
+    height: 500px;
+    justify-content: flex-end;
+}
+
+.canetacontainer {
+    display: flex;
+    width: 1300px;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.texto3 {
+    background-color: #FFFDEF;
+    width: 604px;
+    height: 291px;
+    border-radius: 300px 0px 0px 300px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+
+.whatsca {
+    background-color: #11AE4B;
+    padding: 10px 50px 10px 40px;
+    border-radius: 300px;
+    background-image: url(../../images/w1.png);
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    text-decoration: none;
+    font-weight: 500;
+    color: #FFFDEF;
+    font-size: 24px;
+    display: inline-block;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsca:hover {
+    background-color: #0e8c3c;
+    transform: scale(1.05);
+}
+
+.canetacontainer img {
+    margin-right: -5rem;
+    z-index: 1;
+    margin-top: -1rem;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+    .caneta {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        gap: 1.5rem;
+        background-position: center bottom;
+        padding: 2rem 0;
+    }
+
+    .canetacontainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+    }
+
+    .canetacontainer img {
+        position: relative;
+        margin: 0 auto;
+        width: 80%;
+        max-width: 320px;
+        display: block;
+        z-index: 2;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .texto3 {
+        width: 90%;
+        height: auto;
+        border-radius: 20px;
+        padding: 1.5rem;
+        gap: 0.8rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .texto3 h2 { font-size: 28px; }
+    .texto3 h3 { font-size: 16px; }
+
+    .whatsca {
+        font-size: 18px;
+        padding: 8px 30px 8px 30px;
+        background-size: 20px;
+        background-position: 10px center;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .caneta {
+        justify-content: center;
+        height: auto;
+        background-position: left bottom;
+        padding: 2rem 0;
+    }
+
+    .canetacontainer {
+        width: 90%;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .canetacontainer img {
+        position: relative;
+        width: 40%;
+        max-width: 300px;
+        margin: 0;
+        z-index: 1;
+        display: block;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .texto3 {
+        width: 60%;
+        height: auto;
+        border-radius: 25px;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .texto3 h2 { font-size: 30px; }
+    .texto3 h3 { font-size: 18px; }
+
+    .whatsca {
+        font-size: 20px;
+        padding: 10px 40px 10px 30px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+    .canetacontainer {
+        position: relative;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .canetacontainer img {
+        position: relative;
+        margin-right: -5rem;
+        margin-top: -1rem;
+        width: 350px;
+        z-index: 1;
+        display: block;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .whatsca {
+        font-size: 24px;
+        padding: 10px 50px 10px 40px;
+    }
+}
+
+
+/*Canecas*/
+.canecasection{
+    background-color: #E96B12;
+    color: #FFFDEF;
+    display: flex;
+    background-image: url(../../images/canecas_fundo.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    align-items: center;
+    gap: 2rem;
+    height: 500px;
+    justify-content: flex-start; /* imagem à esquerda */
+    
+}
+.canecacont{
+     display: flex;
+    width: 1300px;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+.textocaneca{
+    background-color: #FFFDEF;
+    width: 604px;
+    height: 291px;
+    border-radius: 0px 300px 300px 0px; /* borda arredondada à direita */
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+
+.whatscan{
+    background-color: #11AE4B;
+    padding: 10px 50px 10px 40px;
+    border-radius: 300px;
+    background-image: url(../../images/w1.png);
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    text-decoration: none;
+    font-weight: 500;
+    color: #FFFDEF;
+    font-size: 24px;
+    display: inline-block;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatscan:hover {
+    background-color: #0e8c3c;
+    transform: scale(1.05);
+}
+
+.canecacont img {
+    z-index: 1;
+    position: relative;
+    margin-top: -1rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+@media (max-width: 768px) {
+    .canecasection {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        gap: 1.5rem;
+        padding: 2rem 0;
+        background-position: center bottom;
+    }
+
+    .canecacont {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        gap: 1.5rem;
+    }
+
+    .canecacont img {
+        order: 1; /* imagem em cima */
+        width: 50%;
+        max-width: 100px;
+        margin: 0 auto;
+        z-index: 2;
+    }
+
+    .textocaneca {
+        order: 2; /* texto embaixo da imagem */
+        width: 30%;
+        height: auto;
+        border-radius: 20px;
+        padding: 1.5rem;
+        gap: 0.8rem;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .textocaneca h2 { font-size: 28px; }
+    .textocaneca h3 { font-size: 16px; }
+
+    .whatscan {
+        font-size: 18px;
+        padding: 8px 30px;
+        margin-top: 0.5rem;
+        background-size: 20px;
+        background-position: 10px center;
+    }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .canecasection {
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 2rem 0;
+        background-position: right bottom;
+    }
+
+    .canecacont {
+        flex-direction: row;
+        width: 90%;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .canecacont img {
+        width: 250px;
+        margin: 0;
+        order: 1; /* imagem à esquerda */
+    }
+
+    .textocaneca {
+        width: 60%;
+        height: auto;
+        padding: 1rem;
+        border-radius: 0px 200px 200px 0;
+        order: 2; /* texto à direita */
+    }
+
+    .textocaneca h2 { font-size: 30px; }
+    .textocaneca h3 { font-size: 18px; }
+
+    .whatscan { font-size: 20px; padding: 10px 40px; }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+    .canecacont {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .canecacont img {
+        width: 500px;
+        margin-left: -5rem;
+        margin-top: -1rem;
+        z-index: 1;
+    }
+
+    .textocaneca {
+        width: 604px;
+        padding: 1rem;
+    }
+
+    .whatscan { font-size: 24px; padding: 10px 50px; }
+}
+
+
+
+
+/* Sessão 6 - Chaveirinho*/
+.chaveirosection {
+    background-color: #E96B12;
+    color: #FFFDEF;
+    display: flex;
+    background-image: url(../../images/fundo_chaveiro.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    align-items: center;
+    gap: 2rem;
+    height: 500px;
+    justify-content: flex-start; /* imagem à esquerda */
+}
+
+.chaveirocont {
+    display: flex;
+    width: 1300px;
+    position: relative;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.textochaveiro {
+    background-color: #FFFDEF;
+    width: 604px;
+    height: 291px;
+    border-radius: 0px 300px 300px 0px; /* borda arredondada à direita */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: black;
+    position: relative;
+}
+
+.chaveirocont img {
+    z-index: 1;
+    margin-top: -1rem;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+.whatschaveiro {
+    background-color: #11AE4B;
+    padding: 10px 50px 10px 40px;
+    border-radius: 300px;
+    background-image: url(../../images/w1.png);
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    text-decoration: none;
+    font-weight: 500;
+    color: #FFFDEF;
+    font-size: 24px;
+    display: inline-block;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatschaveiro:hover {
+    background-color: #0e8c3c;
+    transform: scale(1.05);
+}
+
+/* Animação flutuante */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+    .chaveirosection {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        gap: 1.5rem;
+        padding: 2rem 0;
+        background-position: center bottom;
+    }
+
+    .chaveirocont {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 1.5rem;
+    }
+
+    .chaveirocont img {
+        order: 1; /* imagem em cima */
+        width: 80%;
+        max-width: 300px;
+        margin: 0 auto;
+        z-index: 2;
+    }
+
+    .textochaveiro {
+        order: 2; /* texto embaixo da imagem */
+        width: 90%;
+        height: auto;
+        border-radius: 20px;
+        padding: 1.5rem;
+        gap: 0.8rem;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .textochaveiro h2 { font-size: 28px; }
+    .textochaveiro h3 { font-size: 16px; }
+
+    .whatschaveiro {
+        font-size: 18px;
+        padding: 8px 30px;
+        margin-top: 0.5rem;
+        background-size: 20px;
+        background-position: 10px center;
+    }
+}
+
+/* Tablets */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .chaveirosection {
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 2rem 0;
+        background-position: right bottom;
+    }
+
+    .chaveirocont {
+        flex-direction: row;
+        width: 90%;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .chaveirocont img {
+        width: 250px;
+        margin: 0;
+        order: 1; /* imagem à esquerda */
+    }
+
+    .textochaveiro {
+        width: 60%;
+        height: auto;
+        padding: 1rem;
+        border-radius: 0px 200px 200px 0;
+        order: 2; /* texto à direita */
+    }
+
+    .textochaveiro h2 { font-size: 30px; }
+    .textochaveiro h3 { font-size: 18px; }
+
+    .whatschaveiro { font-size: 20px; padding: 10px 40px; }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+    .chaveirocont {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .chaveirocont img {
+        width: 500px;
+        margin-left: -5rem;
+        margin-top: -1rem;
+        z-index: 1;
+    }
+
+    .textochaveiro {
+        width: 604px;
+        padding: 1rem;
+    }
+
+    .whatschaveiro { font-size: 24px; padding: 10px 50px; }
+}
