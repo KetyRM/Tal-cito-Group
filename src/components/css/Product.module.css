@@ -5,7 +5,6 @@
     background-image: url(../../images/copos_duplos.png);
     background-repeat: no-repeat;
     background-position: left bottom; 
-
     flex-direction: column;
     align-items: center;
     gap: 2rem;
@@ -34,8 +33,6 @@ h1{
     justify-content: flex-end;
     flex-direction: row;
 }
-
-
 
 .texto{
     background-color: #FFFDEF;
@@ -98,5 +95,500 @@ h3{
     }
 }
 
+
+
+
+
+
+
+
+/* Telas pequenas - Mobile */
+@media (max-width: 768px) {
+    .copos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+    .caixa {
+        width: 90%;
+        height: auto; /* diminui proporcionalmente */
+    }
+
+    h1 {
+        font-size: 32px; /* diminui proporcionalmente */
+        text-align: center;
+    }
+
+    .texto {
+        width: 90%;
+        height: auto;
+        border-radius: 20px; /* quadrado arredondado */
+        padding: 1rem;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .texto h2 {
+        font-size: 28px;
+    }
+
+    .texto h3 {
+        font-size: 16px;
+    }
+
+    .copos img {
+       margin-right: 0;
+       margin-left: 3px;
+       margin-top: -0.5rem;
+       max-width: 80%;
+    position: relative;
+        align-items: center;
+       
+    }
+
+    .whatsLink {
+        gap: 2rem;
+        font-size: 18px;
+        padding: 10px 30px 10px 40px;
+    }
+}
+
+/* Telas médias - Tablets */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .caixa {
+        width: 80%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .texto {
+        width: 70%;
+        height: auto;
+        border-radius: 15px;
+        padding: 1rem;
+        gap: 0.8rem;
+    }
+
+    .texto h2 {
+        font-size: 32px;
+    }
+
+    .texto h3 {
+        font-size: 18px;
+    }
+
+    .copos img {
+        margin-right: -10rem;
+        max-width: 50%;
+        margin-top: -0.5rem;
+    }
+
+    .whatsLink {
+        font-size: 20px;
+        padding: 10px 40px 10px 30px;
+    }
+}
+
+/* Telas grandes - Desktop */
+@media (min-width: 1200px) {
+    /* Mantém o CSS original do desktop, sem alterações */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Sessão 3 - Toalhas*/
+.toalhaSection{
+    background-color: #E48527;
+    color: #FFFDEF;
+    display: flex;
+    background-image: url(../../images/fundo_toalha.png);
+    background-repeat: no-repeat;
+    background-position: left bottom; 
+    align-items: center;
+    gap: 2rem;
+    height: 500px;
+    justify-content: flex-end;
+}
+.toalha4{
+    display: flex;
+    width: 1300px;
+    position: relative;
+    justify-content: flex-end;
+}
+.textos{
+    background-color: #FFFDEF;
+    width: 604px;
+    height: 291px;
+    border-radius: 300px 0px 0px 300px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+.whats{
+    background-color: #11AE4B;
+    padding: 10px 50px 10px 40px;
+    border-radius: 300px 300px 300px 300px;
+    background-image: url(../../images/w1.png);
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    text-decoration: none;
+    font-weight: 500;
+    color: #FFFDEF;
+    font-size: 24px;
+}
+.toalha4 img{
+    margin-right: 50rem;
+    z-index: 1;
+    margin-top: -6rem;
+    position: relative;
+    animation: float 3s ease-in-out infinite; 
+
+}
+/* === RESPONSIVIDADE - SESSÃO TOALHAS === */
+
+/* Telas pequenas - Mobile */
+@media (max-width: 768px) {
+    .toalhaSection {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        gap: 1.5rem;
+        background-position: center bottom;
+        padding: 2rem 0;
+    }
+
+    .toalha4 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+    }
+
+    .toalha4 img {
+        position: relative;
+        margin: 0;
+        width: 80%;
+        max-width: 300px;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .textos {
+        width: 90%;
+        height: auto;
+        border-radius: 20px;
+        padding: 1.5rem;
+        gap: 0.8rem;
+        text-align: center;
+    }
+
+    .textos h2 {
+        font-size: 28px;
+    }
+
+    .textos h3 {
+        font-size: 16px;
+    }
+
+    .whats {
+        font-size: 18px;
+        padding: 8px 30px 8px 30px;
+        background-size: 20px;
+        background-position: 10px center;
+    }
+}
+
+/* Telas médias - Tablets */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .toalhaSection {
+        justify-content: center;
+        height: auto;
+        background-position: left bottom;
+        padding: 2rem 0;
+    }
+
+    .toalha4 {
+        width: 90%;
+        position: relative;
+        justify-content: flex-end;
+    }
+
+    .toalha4 img {
+        position: absolute;
+        top: 50%;
+        right: -8rem;
+        transform: translateY(-50%);
+        width: 250px;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .textos {
+        width: 70%;
+        height: auto;
+        border-radius: 20px 0 0 20px;
+        padding: 1rem;
+    }
+
+    .textos h2 {
+        font-size: 30px;
+    }
+
+    .textos h3 {
+        font-size: 18px;
+    }
+
+    .whats {
+        font-size: 20px;
+        padding: 10px 40px 10px 35px;
+    }
+}
+
+/* Telas grandes - Desktop */
+@media (min-width: 1200px) {
+    .toalha4 {
+        position: relative;
+    }
+
+    .toalha4 img {
+        position: absolute;
+        top: 50%;
+        right: -15rem;
+        transform: translateY(-50%);
+        width: 350px;
+        animation: float 3s ease-in-out infinite;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Sessão 5 - Crachá */
+.crachaSection {
+    background-color: #E48527;
+    color: #FFFDEF;
+    display: flex;
+    background-image: url(../../images/fundo_cracha.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    align-items: center;
+    gap: 2rem;
+    height: 500px;
+    justify-content: flex-end;
+}
+
+.crachaContainer{
+    display: flex;
+    width: 1300px;
+    position: relative;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.texto1{
+    background-color: #FFFDEF;
+    width: 604px;
+    height: 291px;
+    border-radius: 300px 0px 0px 300px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+
+.whatscra{
+    background-color: #11AE4B;
+    padding: 10px 50px 10px 40px;
+    border-radius: 300px;
+    background-image: url(../../images/w1.png);
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    text-decoration: none;
+    font-weight: 500;
+    color: #FFFDEF;
+    font-size: 24px;
+}
+
+.crachaContainer img {
+    margin-right: -5rem;
+    z-index: 1;
+    margin-top: -1rem;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Animação flutuante */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+/* Sessão 5 - Crachá Responsivo */
+
+/* Telas pequenas - Mobile */
+@media (max-width: 768px) {
+    .crachaSection {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        gap: 1.5rem;
+        background-position: center bottom;
+        padding: 2rem 0;
+    }
+
+    .crachaContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+    }
+
+    .crachaContainer img {
+        position: relative;
+        margin: 0 auto;
+        width: 80%;
+        max-width: 320px;
+        display: block; /* garante que a imagem sempre apareça */
+        z-index: 2;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .texto1 {
+        width: 90%;
+        height: auto;
+        border-radius: 20px;
+        padding: 1.5rem;
+        gap: 0.8rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .texto1 h2 {
+        font-size: 28px;
+    }
+
+    .texto1 h3 {
+        font-size: 16px;
+    }
+
+    .whatscra{
+        font-size: 18px;
+        padding: 8px 30px 8px 30px;
+        background-size: 20px;
+        background-position: 10px center;
+    }
+}
+
+/* Telas médias - Tablets */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .crachaSection {
+        justify-content: center;
+        height: auto;
+        background-position: left bottom;
+        padding: 2rem 0;
+    }
+
+    .crachaContainer {
+        width: 90%;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .crachaContainer img {
+        position: relative;
+        width: 40%;
+        max-width: 300px;
+        margin: 0;
+        z-index: 1;
+        display: block;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .texto1 {
+        width: 60%;
+        height: auto;
+        border-radius: 25px;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .texto1 h2 {
+        font-size: 30px;
+    }
+
+    .texto1 h3 {
+        font-size: 18px;
+    }
+
+    .whatscra{
+        font-size: 20px;
+        padding: 10px 40px 10px 30px;
+    }
+}
+
+/* Telas grandes - Desktop */
+@media (min-width: 1200px) {
+    .crachaContainer {
+        position: relative;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .crachaContainer img {
+        position: relative;
+        margin-right: -5rem;
+        margin-top: -1rem;
+        width: 350px;
+        z-index: 1;
+        display: block;
+        animation: float 3s ease-in-out infinite;
+    }
+}
 
 
